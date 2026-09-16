@@ -6,7 +6,7 @@ import {
   Atom, Leaf, Lightbulb, BookOpen, Users, ArrowRight, CheckCircle2, 
   Download, Mail, MapPin, Phone, Microscope, Palette, Trophy, Globe,
   Play, Quote, ChevronDown, Star, Award, Target, Zap, Heart,
-  Menu, X, Instagram, Twitter, Linkedin, Share2, Youtube
+  Menu, X, Camera, Twitter, Linkedin, Share2, Youtube
 } from 'lucide-react';
 
 // --- COMPONENTS ---
