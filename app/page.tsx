@@ -36,7 +36,7 @@ const SectionHeading = ({ children, subtitle, align = "center", light = false }:
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-100px" }}
-    className={`mb-20 ${align === "center" ? "text-center" : "text-left"} max-w-4xl mx-auto`}
+    className={`mb-20 w-full max-w-4xl mx-auto ${align === "center" ? "text-center" : "text-left"}`}
   >
     {subtitle && (
       <motion.span 
@@ -53,7 +53,7 @@ const SectionHeading = ({ children, subtitle, align = "center", light = false }:
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: 0.1 }}
-      className={`text-5xl md:text-6xl lg:text-7xl font-black leading-tight ${light ? 'text-white' : 'text-slate-900'}`}
+      className={`text-4xl md:text-5xl lg:text-6xl font-black leading-tight ${light ? 'text-white' : 'text-slate-900'}`}
     >
       {children}
     </motion.h2>
@@ -404,7 +404,7 @@ export default function HomePage() {
       {/* Programs Grid - Bento Style */}
       <section id="programs" className="py-32 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading subtitle="What We Do">
+          <SectionHeading subtitle="What We Do" align="center">
             Comprehensive Learning <br />Programs
           </SectionHeading>
           
@@ -552,13 +552,13 @@ export default function HomePage() {
               >
                 <div className="flex-1 hidden md:block" />
                 
-                <div className="absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white border-4 border-blue-600 flex items-center justify-center z-10 shadow-xl">
-                  <span className="text-xs font-black text-blue-900 text-center">{item.year}</span>
+                <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full bg-white border-4 border-blue-600 flex items-center justify-center z-10 shadow-xl">
+                  <span className="text-[10px] md:text-xs font-black text-blue-900 text-center">{item.year}</span>
                 </div>
-                
+                 
                 <motion.div 
                   whileHover={{ scale: 1.05 }}
-                  className={`flex-1 md:w-1/2 ${item.side === "left" ? "md:pr-16 pl-16 md:pl-0 md:text-right" : "md:pl-16 pl-16"}`}
+                  className={`flex-1 md:w-1/2 ${item.side === "left" ? "md:pr-16 pl-14 md:pl-0 md:text-right" : "md:pl-16 pl-14"}`}
                 >
                   <div className="bg-gradient-to-br from-slate-50 to-white p-8 rounded-3xl border border-slate-200 shadow-lg hover:shadow-2xl transition-all">
                     <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-3">{item.phase}</span>
