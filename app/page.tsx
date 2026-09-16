@@ -6,7 +6,7 @@ import {
   Atom, Leaf, Lightbulb, BookOpen, Users, ArrowRight, CheckCircle2, 
   Download, Mail, MapPin, Phone, Microscope, Palette, Trophy, Globe,
   Play, Quote, ChevronDown, Star, Award, Target, Zap, Heart,
-  Menu, X, Camera, Twitter, Linkedin, Share2, Youtube
+  Menu, X, Camera, Twitter, User, Share2, Play
 } from 'lucide-react';
 
 // --- COMPONENTS ---
@@ -752,7 +752,7 @@ export default function HomePage() {
               </div>
               
               <div className="flex gap-4 mt-12">
-                {[Share2, Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
+                {[Share2, Twitter, Camera, User, Play].map((Icon, i) => (
                   <motion.a
                     key={i}
                     href="#"
@@ -818,7 +818,7 @@ export default function HomePage() {
                 Empowering rural Bihar through science, environment, and education.
               </p>
               <div className="flex gap-3">
-                {[Share2, Twitter, Instagram, Linkedin].map((Icon, i) => (
+                {[Share2, Twitter, Camera, User].map((Icon, i) => (
                   <a key={i} href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
                     <Icon className="w-4 h-4" />
                   </a>
