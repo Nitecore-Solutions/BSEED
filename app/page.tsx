@@ -6,7 +6,7 @@ import {
   Atom, Leaf, Lightbulb, BookOpen, Users, ArrowRight, CheckCircle2, 
   Download, Mail, MapPin, Phone, Microscope, Palette, Trophy, Globe,
   Play, Quote, ChevronDown, Star, Award, Target, Zap, Heart,
-  Menu, X, Camera, Twitter, User, Share2
+  Menu, X
 } from 'lucide-react';
 
 // --- COMPONENTS ---
@@ -752,14 +752,9 @@ export default function HomePage() {
               </div>
               
               <div className="flex gap-4 mt-12">
-                {[Share2, Twitter, Camera, User, Play].map((Icon, i) => (
-                  <motion.a
-                    key={i}
-                    href="#"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all"
-                  >
-                    <Icon className="w-5 h-5" />
+                {['fb','tw','ig','yt','li'].map((s,i)=>(
+                  <motion.a key={i} href="#" whileHover={{ scale: 1.1, y: -2 }} className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all">
+                    <span className="text-xs font-bold">{s}</span>
                   </motion.a>
                 ))}
               </div>
@@ -818,9 +813,9 @@ export default function HomePage() {
                 Empowering rural Bihar through science, environment, and education.
               </p>
               <div className="flex gap-3">
-                {[Share2, Twitter, Camera, User].map((Icon, i) => (
+                {['Fb','Tw','Ig','Li'].map((s,i)=>(
                   <a key={i} href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
-                    <Icon className="w-4 h-4" />
+                    <span className="text-xs font-bold">{s}</span>
                   </a>
                 ))}
               </div>
